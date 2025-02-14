@@ -1,7 +1,7 @@
-// LoginPage.jsx
+// RegistrationPage.jsx
 import { mount, el } from '../../node_modules/redom/dist/redom.es';
 
-class LoginPage {
+class RegistrationPage {
     constructor() {
         this.el = (
             <div className="container mt-5">
@@ -9,7 +9,7 @@ class LoginPage {
                     <div className="col-md-6">
                         <div className="card">
                             <div className="card-header text-center">
-                                <h3>Вход</h3>
+                                <h3>Регистрация</h3>
                             </div>
                             <div className="card-body">
                                 <form>
@@ -21,12 +21,16 @@ class LoginPage {
                                         <label htmlFor="password" className="form-label">Пароль</label>
                                         <input type="password" id="password" className="form-control" placeholder="Введите пароль" />
                                     </div>
+                                    <div className="mb-3">
+                                        <label htmlFor="confirm-password" className="form-label">Повторите пароль</label>
+                                        <input type="password" id="confirm-password" className="form-control" placeholder="Повторите пароль" />
+                                    </div>
                                     <div className="d-grid gap-2">
-                                        <button type="submit" className="btn btn-primary">Войти</button>
+                                        <button type="submit" className="btn btn-primary">Зарегистрироваться</button>
                                     </div>
                                 </form>
                                 <div className="text-center mt-3">
-                                    <a href="#" id="go-to-registration" className="link-primary">Нет аккаунта? Зарегистрироваться</a>
+                                    <a href="#" id="go-to-login" className="link-primary">Уже есть аккаунт? Войти</a>
                                 </div>
                             </div>
                         </div>
@@ -37,4 +41,4 @@ class LoginPage {
     }
 }
 
-export default LoginPage;
+export default RegistrationPage;
