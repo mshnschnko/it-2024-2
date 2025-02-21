@@ -82,14 +82,12 @@
 
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script>
-        // Валидация формы
         (function() {
             'use strict'
             
             const form = document.getElementById('editForm')
             const titleInput = document.getElementById('taskTitle')
 
-            // Live-валидация
             titleInput.addEventListener('input', function() {
                 if (titleInput.value.trim() === '') {
                     titleInput.classList.add('is-invalid')
