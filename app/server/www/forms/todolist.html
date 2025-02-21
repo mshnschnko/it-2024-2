@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список дел</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .task-completed {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+        .due-date {
+            font-size: 0.9em;
+        }
+        .bi-trash {
+            transition: opacity 0.2s;
+        }
+        .bi-trash:hover {
+            opacity: 0.75;
+        }
+        .task-icon {
+            color: #dc3545; /* Красный цвет для важности */
+            margin-left: 0.5rem;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h3 class="mb-0">Список дел</h3>
+                <button class="btn btn-outline-danger btn-sm">Выход</button>
+            </div>
+            
+            <div class="card-body">
+                <div class="list-group">
+                    <div class="list-group-item list-group-item-success">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input" type="checkbox" checked disabled>
+                                <i class="bi bi-exclamation-circle task-icon"></i>
+                                <label class="form-check-label task-completed ms-2">Задача 1</label>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="due-date text-muted">14.02.2025</span>
+                                <button class="btn btn-link p-0 text-danger">
+                                    <i class="bi bi-trash fs-5"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item list-group-item-danger">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">Задача 3</label>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="due-date text-muted me-2">11.02.2025</span>
+                                <span class="badge bg-dark">просрочено</span>
+                                <button class="btn btn-link p-0 text-danger">
+                                    <i class="bi bi-trash fs-5"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input" type="checkbox">
+                                <i class="bi bi-exclamation-circle task-icon"></i>
+                                <label class="form-check-label ms-2">Задача 2</label>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="due-date text-muted">21.02.2025</span>
+                                <button class="btn btn-link p-0 text-danger">
+                                    <i class="bi bi-trash fs-5"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">Задача 4</label>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="due-date text-muted">11.04.2025</span>
+                                <button class="btn btn-link p-0 text-danger">
+                                    <i class="bi bi-trash fs-5"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
