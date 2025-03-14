@@ -1,7 +1,7 @@
-import { mount, el, text } from '../../node_modules/redom/dist/redom.es';
-import LoginAndPasswordForm from './LoginAndPasswordForm.js';
+import { mount, el } from '../../node_modules/redom/dist/redom.es';
 import Button from '../atom/button.js';
-import { linkButton as LinkButton } from '../atom/link.js';
+import LinkButton from '../atom/link.js';
+import LoginAndPasswordForm from './LoginAndPasswordForm.js';
 
 export default class LoginForm {
     constructor() {
@@ -13,9 +13,7 @@ export default class LoginForm {
             <div className='d-flex flex-column'>
                 <LoginAndPasswordForm/>
                 <Button label='Войти' className='btn-primary' />
-                <LinkButton href='/register'>
-                    {text('Зарегистрироваться')}
-                </LinkButton>
+                <LinkButton label='Зарегистрироваться'/>
             </div>
         )
     }
